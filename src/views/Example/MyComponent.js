@@ -4,34 +4,57 @@ class MyComponent extends React.Component {
 
     state = {
         firstName: 'Tai',
-        lastname: 'Vu Van'
-    }
-    handleOnChangeName = (event) => {
-
-        this.setState({
-            firstName: event.target.value
-        })
-    }
-    handleClickButton() {
-        console.log('my name: ', this.state.firstName)
-        alert(`click me: ${this.state.firstName}`);
+        lastName: 'Vu Van'
     }
 
+    handleChangeFirstName = (event) => {
+        this.setState(
+            {
+                firstName: event.target.value
+            }
+        )
+    }
+    handleChangeLastName = (event) => {
+        this.setState(
+            {
+                firstName: event.target.value
+            }
+        )
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        console.log(">>> ", this.state)
+    }
 
     render() {
-
+        console.log(this.state);
         return (
             <>
-                <div>
-                    <input value={this.state.firstName} type="text" onChange={(event) => this.handleOnChangeName(event)}></input>
-                    this is first name: {this.state.firstName}
-                </div>
-                <div>
-                    this is last name: {this.state.lastname}
-                </div>
-                <div>
-                    <button onClick={() => this.handleClickButton()}> click me</button>
-                </div>
+                <form>
+                    <label>firstName</label>
+                    <br />
+                    <input
+                        type="text"
+                        value={this.state.firstName}
+                        onChange={(event) => this.handleChangeFirstName(event)}
+                    />
+                    <br />
+                    <label>lastName</label>
+                    <br />
+                    <input
+                        type="text"
+                        value={this.state.lastName}
+                        onChange={(event) => this.handleChangeLastName(event)}
+                    />
+                    <br />
+                    <input
+                        type="submit"
+                        onClick={(event) => this.handleSubmit(event)}
+                    />
+
+
+                </form>
             </>
         )
     }
