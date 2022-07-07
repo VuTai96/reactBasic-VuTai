@@ -1,10 +1,17 @@
 import React from "react";
+import ChildComponent from "./ChildComponent";
 
 class MyComponent extends React.Component {
 
     state = {
         firstName: 'Tai',
-        lastName: 'Vu Van'
+        lastName: 'Vu Van',
+        adress: 'Nghe an',
+        arrJobs: [
+            { id: "abc1", job: "html", salary: "1000 $" },
+            { id: "abc2", job: "CSS", salary: "2000 $" },
+            { id: "abc3", job: "JS", salary: "3000 $" }
+        ]
     }
 
     handleChangeFirstName = (event) => {
@@ -17,7 +24,7 @@ class MyComponent extends React.Component {
     handleChangeLastName = (event) => {
         this.setState(
             {
-                firstName: event.target.value
+                lastName: event.target.value
             }
         )
     }
@@ -52,9 +59,13 @@ class MyComponent extends React.Component {
                         type="submit"
                         onClick={(event) => this.handleSubmit(event)}
                     />
-
-
                 </form>
+                <ChildComponent
+                    name={this.state.lastName + ' ' + this.state.firstName}
+                    age={'26'}
+                    arrJobs={this.state.arrJobs}
+                />
+
             </>
         )
     }

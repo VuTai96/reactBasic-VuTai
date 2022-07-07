@@ -15,7 +15,6 @@ function App() {
 
         <MyComponent />
 
-
       </header>
     </div>
   );
