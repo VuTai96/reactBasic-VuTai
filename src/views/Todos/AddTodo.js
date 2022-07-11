@@ -10,7 +10,7 @@ class AddTodo extends React.Component {
         this.setState({
             title: event.target.value
         })
-        console.log(">>> data added: ", this.state)
+        //console.log(">>> data added: ", this.state)
     }
     handleAddTodo = () => {
         if (!this.state.title) {
@@ -36,8 +36,7 @@ class AddTodo extends React.Component {
                     onChange={(event) => this.handleOnchangeTitle(event)}
                 />
                 <button type="button" className="add"
-                    onClick={() => this.handleAddTodo()}
-                >
+                    onClick={() => this.handleAddTodo()}>
                     add
                 </button>
             </div>
