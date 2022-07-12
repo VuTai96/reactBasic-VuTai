@@ -16,23 +16,23 @@ class MyComponent extends React.Component {
         this.setState({
             arrJobs: [...this.state.arrJobs, job]
         })
-        console.log('MC addNewJob: ', this.state.arrJobs)
+        //console.log('MC addNewJob: ', this.state.arrJobs)
     }
 
     deleteJob = (job) => {
         let newarrJob = this.state.arrJobs.filter((item) => item.id !== job.id)
-        console.log('MC deleteJob: ', newarrJob);
+        //console.log('MC deleteJob: ', newarrJob);
         this.setState({
             arrJobs: newarrJob
         })
     }
 
     componentDidMount() {
-        console.log(">>>> Run component dit mount")
+        //console.log(">>>> Run component dit mount")
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log(">>> Run componet dit update: ", "prevState: ", prevState, "current state: ", this.state)
+        //console.log(">>> Run componet dit update: ", "prevState: ", prevState, "current state: ", this.state)
     }
 
     render() {
