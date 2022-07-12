@@ -16,8 +16,6 @@ class DetailUser extends React.Component {
             this.setState({
                 user: res?.data?.data
             })
-
-
             //console.log('>>check res user ', res, this.state.user)
         }
     }
@@ -42,9 +40,6 @@ class DetailUser extends React.Component {
                         <div><button onClick={() => this.handleBackbutton()}>Back</button></div>
                     </>
                 }
-
-
-
             </>
 
         )
