@@ -27,13 +27,13 @@ class MyComponent extends React.Component {
         })
     }
 
-    componentDidMount() {
-        //console.log(">>>> Run component dit mount")
-    }
+    // componentDidMount() {
+    //     console.log(">>>> Run component dit mount")
+    // }
 
-    componentDidUpdate(prevProps, prevState) {
-        //console.log(">>> Run componet dit update: ", "prevState: ", prevState, "current state: ", this.state)
-    }
+    // componentDidUpdate(prevProps, prevState) {
+    //     console.log(">>> Run componet dit update: ", "prevState: ", prevState, "current state: ", this.state)
+    // }
 
     render() {
         console.log('>>> Call Render: ', this.state);
