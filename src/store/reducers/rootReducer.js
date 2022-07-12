@@ -1,5 +1,3 @@
-import { act } from "react-dom/test-utils";
-
 const initState = {
     users: [
         { id: 1, name: 'TaiVu' },
